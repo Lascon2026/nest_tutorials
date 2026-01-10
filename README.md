@@ -22,10 +22,18 @@ This material is publicly available at https://github.com/Lascon2026/nest_tutori
 
 ### NEST Desktop on your own computer
 
+**Updated Saturday 10 Jan 2026**
+
 - Assumes you use VM or have LASCON conda/mamba setup
+- In the VM, you need to run (once)
+```bash
+pip install --break-system-packages nest-desktop gunicorn flask flask_cors RestrictedPython
+```
+to install missing packages
 - In terminal run
 ```bash
 export NEST_SERVER_DISABLE_AUTH=1
+export NEST_SERVER_ENABLE_EXEC_CALL=1
 nest-server start -d
 nest-desktop start
 ```
